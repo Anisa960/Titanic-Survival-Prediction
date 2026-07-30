@@ -29,7 +29,7 @@ with st.form("form"):
 
 if submitted:
     X = pd.DataFrame([{
-        "Pclass": pclass, "Sex": sex, "Age": age, "SibSp": sibsp,
+        "Pclass": str(pclass), "Sex": sex, "Age": age, "SibSp": sibsp,
         "Parch": parch, "Fare": fare, "Embarked": embarked
     }])
     proba = model.predict_proba(X)[0,1]

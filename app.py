@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import sklearn
+st.write("scikit-learn:", sklearn.__version__)
+
 
 st.set_page_config(page_title="Titanic Survival Predictor", page_icon="🚢")
 
@@ -36,3 +39,7 @@ if submitted:
     pred = "Survived" if proba >= 0.5 else "Not Survived"
     st.subheader(f"Prediction: {pred}")
     st.write(f"Survival probability: {proba:.2%}")
+st.write(type(model))
+print(model)
+from pprint import pprint
+pprint(model)

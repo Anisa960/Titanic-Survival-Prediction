@@ -39,7 +39,4 @@ if submitted:
     pred = "Survived" if proba >= 0.5 else "Not Survived"
     st.subheader(f"Prediction: {pred}")
     st.write(f"Survival probability: {proba:.2%}")
-st.write(type(model))
-print(model)
-from pprint import pprint
-pprint(model)
+st.success("✅ Model loaded successfully!")
